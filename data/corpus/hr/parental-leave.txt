@@ -1,0 +1,22 @@
+---
+title: Parental Leave Policy
+department: HR
+acl: public
+effective_date: 2025-01-01
+---
+
+# Parental Leave Policy
+
+All employees who become parents through birth, adoption or foster placement are eligible after 3 months of employment.
+
+## Leave duration
+
+Birthing parents receive 20 weeks of fully paid leave. Non-birthing parents receive 16 weeks of fully paid leave. Leave can be taken in up to 3 blocks within 12 months of the child's arrival.
+
+## Phased return
+
+After parental leave, employees may work 60% of their normal hours at full pay for 4 weeks.
+
+## How to apply
+
+Tell your manager and People Ops at least 8 weeks before the expected start date, then submit the leave request in Workday under "Parental Leave".

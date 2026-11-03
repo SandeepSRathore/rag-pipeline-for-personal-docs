@@ -1,0 +1,39 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      # Everything below runs offline and free: no OpenAI key in CI.
+      QDRANT_PATH: ":memory:"
+      LLM_PROVIDER: fake
+      MODERATION_ENABLED: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Lint
+        run: |
+          uv run ruff check src tests scripts
+          uv run ruff format --check src tests scripts
+      - name: Type check
+        run: uv run mypy src
+      - name: Tests
+        run: uv run pytest
+      - name: Dependency audit
+        run: uv run pip-audit --strict --progress-spinner off
+      - name: Retrieval + adversarial eval gate
+        env:
+          EMBEDDINGS_PROVIDER: local
+          QDRANT_PATH: var/qdrant_ci
+        run: uv run rag eval --min-hit-rate 0.9

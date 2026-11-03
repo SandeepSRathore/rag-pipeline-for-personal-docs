@@ -1,0 +1,47 @@
+{"id": "g01", "question": "How many PTO days do full-time employees get per year?", "role": "employee", "expected_docs": ["hr/pto-policy-2025.md"], "answerable": true, "must_contain_any": ["25"]}
+{"id": "g02", "question": "How many unused PTO days can I carry over to next year?", "role": "employee", "expected_docs": ["hr/pto-policy-2025.md"], "answerable": true, "must_contain_any": ["10"]}
+{"id": "g03", "question": "Are sick days deducted from my PTO balance?", "role": "employee", "expected_docs": ["hr/pto-policy-2025.md"], "answerable": true, "must_contain_any": ["separate", "10"]}
+{"id": "g04", "question": "When do I need a doctor's note for sick leave?", "role": "employee", "expected_docs": ["hr/pto-policy-2025.md"], "answerable": true, "must_contain_any": ["5"]}
+{"id": "g05", "question": "What happens if my manager doesn't respond to my time off request?", "role": "employee", "expected_docs": ["hr/pto-policy-2025.md"], "answerable": true, "must_contain_any": ["automatic"]}
+{"id": "g06", "question": "How much is the monthly wellness stipend?", "role": "employee", "expected_docs": ["hr/benefits-overview.md"], "answerable": true, "must_contain_any": ["100"]}
+{"id": "g07", "question": "What is the 401k match?", "role": "employee", "expected_docs": ["hr/benefits-overview.md"], "answerable": true, "must_contain_any": ["5%"]}
+{"id": "g08", "question": "How much is the home office stipend for new hires?", "role": "employee", "expected_docs": ["hr/benefits-overview.md"], "answerable": true, "must_contain_any": ["750"]}
+{"id": "g09", "question": "How many free counseling sessions does the EAP offer?", "role": "employee", "expected_docs": ["hr/benefits-overview.md"], "answerable": true, "must_contain_any": ["8"]}
+{"id": "g10", "question": "How long can I work from another country without approval?", "role": "employee", "expected_docs": ["hr/remote-work-policy.md"], "answerable": true, "must_contain_any": ["30"]}
+{"id": "g11", "question": "What are the default core hours for cross-region teams?", "role": "employee", "expected_docs": ["hr/remote-work-policy.md"], "answerable": true, "must_contain_any": ["14:00"]}
+{"id": "g12", "question": "Which roles are not eligible for fully remote work?", "role": "employee", "expected_docs": ["hr/remote-work-policy.md"], "answerable": true, "must_contain_any": ["facilities"]}
+{"id": "g13", "question": "What is the hotel limit in London?", "role": "employee", "expected_docs": ["hr/travel-policy.md"], "answerable": true, "must_contain_any": ["350"]}
+{"id": "g14", "question": "When can I fly business class?", "role": "employee", "expected_docs": ["hr/travel-policy.md"], "answerable": true, "must_contain_any": ["10 hours"]}
+{"id": "g15", "question": "What is the daily meal per diem when traveling?", "role": "employee", "expected_docs": ["hr/travel-policy.md"], "answerable": true, "must_contain_any": ["75"]}
+{"id": "g16", "question": "Who needs to approve an expense of $3,000?", "role": "employee", "expected_docs": ["hr/expense-policy.pdf"], "answerable": true, "must_contain_any": ["department head"]}
+{"id": "g17", "question": "Within how many days must expenses be submitted?", "role": "employee", "expected_docs": ["hr/expense-policy.pdf"], "answerable": true, "must_contain_any": ["30"]}
+{"id": "g18", "question": "Above what amount is an itemized receipt required?", "role": "employee", "expected_docs": ["hr/expense-policy.pdf"], "answerable": true, "must_contain_any": ["25"]}
+{"id": "g19", "question": "How long is paid parental leave for non-birthing parents?", "role": "employee", "expected_docs": ["hr/parental-leave.txt"], "answerable": true, "must_contain_any": ["16"]}
+{"id": "g20", "question": "How often are performance reviews held?", "role": "employee", "expected_docs": ["hr/performance-reviews.md"], "answerable": true, "must_contain_any": ["march", "september"]}
+{"id": "g21", "question": "How many peers give feedback in a performance review?", "role": "employee", "expected_docs": ["hr/performance-reviews.md"], "answerable": true, "must_contain_any": ["3"]}
+{"id": "g22", "question": "When are production deploys allowed?", "role": "employee", "expected_docs": ["engineering/deployment-runbook.html"], "answerable": true, "must_contain_any": ["monday"]}
+{"id": "g23", "question": "How do I roll back a deployment?", "role": "employee", "expected_docs": ["engineering/deployment-runbook.html"], "answerable": true, "must_contain_any": ["lumora deploy rollback"]}
+{"id": "g24", "question": "What error rate triggers an automatic canary rollback?", "role": "employee", "expected_docs": ["engineering/deployment-runbook.html"], "answerable": true, "must_contain_any": ["1%"]}
+{"id": "g25", "question": "What is the acknowledgement time for a SEV1 page?", "role": "employee", "expected_docs": ["engineering/on-call-guide.md"], "answerable": true, "must_contain_any": ["5 minutes"]}
+{"id": "g26", "question": "How much is the on-call stipend?", "role": "employee", "expected_docs": ["engineering/on-call-guide.md"], "answerable": true, "must_contain_any": ["400"]}
+{"id": "g27", "question": "What caused the March 2025 billing API outage?", "role": "employee", "expected_docs": ["engineering/incident-postmortem-2025-03.md"], "answerable": true, "must_contain_any": ["index"]}
+{"id": "g28", "question": "How long did the billing outage last?", "role": "employee", "expected_docs": ["engineering/incident-postmortem-2025-03.md"], "answerable": true, "must_contain_any": ["47"]}
+{"id": "g29", "question": "How many approvals does a change to billing code need?", "role": "employee", "expected_docs": ["engineering/code-review-guidelines.md"], "answerable": true, "must_contain_any": ["2"]}
+{"id": "g30", "question": "What does the nit: prefix mean in code review comments?", "role": "employee", "expected_docs": ["engineering/code-review-guidelines.md"], "answerable": true, "must_contain_any": ["optional"]}
+{"id": "g31", "question": "What does error code ERR-4291 mean?", "role": "employee", "expected_docs": ["engineering/api-rate-limits.md"], "answerable": true, "must_contain_any": ["429", "limit"]}
+{"id": "g32", "question": "What is the rate limit for the Growth plan?", "role": "employee", "expected_docs": ["engineering/api-rate-limits.md"], "answerable": true, "must_contain_any": ["600"]}
+{"id": "g33", "question": "What is the minimum password length?", "role": "employee", "expected_docs": ["engineering/security-policy.md"], "answerable": true, "must_contain_any": ["14"]}
+{"id": "g34", "question": "How quickly must a lost laptop be reported?", "role": "employee", "expected_docs": ["engineering/security-policy.md"], "answerable": true, "must_contain_any": ["1 hour"]}
+{"id": "g35", "question": "When does my laptop ship before my start date?", "role": "employee", "expected_docs": ["onboarding/onboarding-checklist.docx"], "answerable": true, "must_contain_any": ["5"]}
+{"id": "g36", "question": "How long is the free trial of Lumora Insights?", "role": "employee", "expected_docs": ["product/product-faq.md"], "answerable": true, "must_contain_any": ["14"]}
+{"id": "g37", "question": "How long are raw events retained on the Enterprise plan?", "role": "employee", "expected_docs": ["product/product-faq.md", "product/pricing-tiers.html"], "answerable": true, "must_contain_any": ["7 years"]}
+{"id": "g38", "question": "How much does the Growth plan cost per month?", "role": "employee", "expected_docs": ["product/pricing-tiers.html"], "answerable": true, "must_contain_any": ["399"]}
+{"id": "g39", "question": "What discount do non-profits get?", "role": "employee", "expected_docs": ["product/pricing-tiers.html"], "answerable": true, "must_contain_any": ["50%"]}
+{"id": "g40", "question": "What does DRI stand for?", "role": "employee", "expected_docs": ["company/glossary.md"], "answerable": true, "must_contain_any": ["directly responsible"]}
+{"id": "g41", "question": "Who is the CTO of Lumora Labs?", "role": "employee", "expected_docs": ["company/org-overview.md"], "answerable": true, "must_contain_any": ["daniel okafor"]}
+{"id": "g42", "question": "What is the salary range for a Staff Engineer?", "role": "hr", "expected_docs": ["hr/salary-bands.md"], "answerable": true, "must_contain_any": ["182,000"]}
+{"id": "g43", "question": "What is the geographic adjustment for Lisbon salaries?", "role": "hr", "expected_docs": ["hr/salary-bands.md"], "answerable": true, "must_contain_any": ["0.62"]}
+{"id": "g44", "question": "Who won the 2018 FIFA World Cup?", "role": "employee", "expected_docs": [], "answerable": false, "must_contain_any": []}
+{"id": "g45", "question": "What is the company policy on bringing dogs to the office?", "role": "employee", "expected_docs": [], "answerable": false, "must_contain_any": []}
+{"id": "g46", "question": "What is the stock price of Lumora Labs today?", "role": "employee", "expected_docs": [], "answerable": false, "must_contain_any": []}
+{"id": "g47", "question": "How do I bake sourdough bread?", "role": "employee", "expected_docs": [], "answerable": false, "must_contain_any": []}
