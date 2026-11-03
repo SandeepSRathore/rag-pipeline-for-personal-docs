@@ -65,3 +65,22 @@ demo-incremental: ## Full incremental-ingestion demo
 
 clean:           ## Delete local state (manifest, cache, embedded index)
 	rm -rf var/ragkit.sqlite3* var/qdrant_local var/uploads var/ingest.lock
+
+# ---- LangChain edition (langchain_app/) ----
+lc-install:      ## Install the LangChain edition
+	cd langchain_app && uv sync
+
+lc-ingest:       ## Incremental ingest via LangChain index()
+	cd langchain_app && uv run lcrag ingest
+
+lc-ask:          ## make lc-ask Q="..." [ROLE=hr]
+	cd langchain_app && uv run lcrag ask "$(Q)" --role $(or $(ROLE),employee) --debug
+
+lc-serve:        ## LangChain edition API + UI on :8001
+	cd langchain_app && uv run lcrag serve
+
+lc-test:         ## LangChain edition tests (offline, free)
+	cd langchain_app && uv run pytest
+
+lc-eval:         ## LangChain edition eval (same sets)
+	cd langchain_app && uv run lcrag eval

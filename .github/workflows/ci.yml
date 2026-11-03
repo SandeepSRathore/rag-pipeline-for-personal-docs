@@ -37,3 +37,32 @@ jobs:
           EMBEDDINGS_PROVIDER: local
           QDRANT_PATH: var/qdrant_ci
         run: uv run rag eval --min-hit-rate 0.9
+
+  langchain:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: langchain_app
+    env:
+      QDRANT_PATH: ":memory:"
+      LLM_PROVIDER: fake
+      MODERATION_ENABLED: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Lint
+        run: |
+          uv run ruff check src tests
+          uv run ruff format --check src tests
+      - name: Type check
+        run: uv run mypy src
+      - name: Tests
+        run: uv run pytest
+      - name: Retrieval + adversarial eval gate (same sets as the custom app)
+        env:
+          EMBEDDINGS_PROVIDER: local
+          QDRANT_PATH: var/qdrant_ci
+        run: uv run lcrag eval --min-hit-rate 0.9

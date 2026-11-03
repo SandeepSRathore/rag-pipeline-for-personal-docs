@@ -64,7 +64,8 @@ function renderAnswer(data) {
     for (const r of data.debug.retrieved || []) {
       const box = el("div", `chunk ${r.kept ? "kept" : "dropped"}`);
       box.appendChild(el("div", "chunk-head",
-        `${r.kept ? "✓ kept" : "✗ dropped"} · ${r.path} › ${r.section || "(intro)"} · rrf ${r.fused_score}` +
+        `${r.kept ? "✓ kept" : "✗ dropped"} · ${r.path} › ${r.section || "(intro)"}` +
+        (r.fused_score !== null && r.fused_score !== undefined ? ` · rrf ${r.fused_score}` : "") +
         (r.rerank_score !== null ? ` · rerank ${r.rerank_score}` : "") +
         (r.superseded_by ? ` · superseded by ${r.superseded_by}` : "")));
       box.appendChild(el("pre", null, r.text));

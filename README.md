@@ -15,6 +15,11 @@ A Retrieval-Augmented Generation (RAG) system over 21 documents from a fictional
 - **Evaluation.** Retrieval metrics and an adversarial attack suite that gates CI.
 - **Cheap by default.** `gpt-5-nano` for answers, plus a fully free local mode for everything else.
 
+> **Also built with LangChain:** [`langchain_app/`](langchain_app/) is the same app built with
+> LangChain 1.x (LCEL, `index()` + `SQLRecordManager`, `QdrantVectorStore` hybrid mode).
+> Both score the same on the eval. [langchain_app/COMPARISON.md](langchain_app/COMPARISON.md)
+> compares the two stage by stage.
+
 > New to RAG? Read [docs/LEARNING_NOTES.md](docs/LEARNING_NOTES.md) alongside the code. It
 > walks through every stage, explains why each one exists, and suggests experiments.
 
